@@ -1,0 +1,6 @@
+﻿  chessstarter.cpp
+e:\school\cs3600\starterchess2018\starterchess2018\chessstarter.cpp(249): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+e:\school\cs3600\starterchess2018\starterchess2018\chessstarter.cpp(251): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+e:\school\cs3600\starterchess2018\starterchess2018\chessstarter.cpp(254): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+e:\school\cs3600\starterchess2018\starterchess2018\chessstarter.cpp(318): warning C4101: 'x': unreferenced local variable
+  StarterChess2018.vcxproj -> E:\School\cs3600\StarterChess2018\Debug\StarterChess2018.exe
