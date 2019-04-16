@@ -359,17 +359,20 @@ void display(void)
 
 	glPushMatrix();
 	glTranslatef(9000, 0, 2000);
-	DrawPiece("ROOK.POL");
+	//DrawPiece("ROOK.POL");
+	glCallList(ROOK);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(8000, 0, 2000);
-	DrawPiece("KNIGHT.POL");
+	//DrawPiece("KNIGHT.POL");
+	glCallList(KNIGHT);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(7000, 0, 2000);
-	DrawPiece("BISHOP.POL");
+	//DrawPiece("BISHOP.POL");
+	glCallList(BISHOP);
 	glPopMatrix();
 
 
@@ -380,6 +383,7 @@ void display(void)
 	Interpolate(t, 11.5, 12.0, x, 5000, 5000, 5000, z, 2000, 1500, 1000);
 	glTranslatef(x, 0, z);
 	DrawPiece("KING.POL");
+	glCallList(KING);
 	glPopMatrix();
 
 
@@ -389,17 +393,20 @@ void display(void)
 
 	glPushMatrix();
 	glTranslatef(6000, 0, 2000);
-	DrawPiece("QUEEN.POL");
+	//DrawPiece("QUEEN.POL");
+	glCallList(QUEEN);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(4000, 0, 2000);
+	glCallList(BISHOP);
 	DrawPiece("BISHOP.POL");
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(3000, 0, 2000);
 	DrawPiece("KNIGHT.POL");
+	glCallList(KNIGHT);
 	glPopMatrix();
 
 	/*
@@ -413,7 +420,8 @@ void display(void)
 	//Interpolate(t, 0.0, 2.0, x, 2000, 4000, 5000, z, 2000, 4000, 5000);
 	glPushMatrix();
 	glTranslatef(2000, 0, 2000);
-	DrawPiece("ROOK.POL");
+	//DrawPiece("ROOK.POL");
+	glCallList(ROOK);
 	glPopMatrix();
 
 
@@ -421,20 +429,23 @@ void display(void)
 	glTranslatef(2000, 0, 3000);
 
 
-	DrawPiece("PAWN.POL");
+	glCallList(PAWN);
+	//DrawPiece("PAWN.POL");
 	glPopMatrix();
 
 	/*Time, x start location, change, y start, change*/
 	Interpolate(t, 6.0, 8.0, x, 3000, 3000, 3000, z, 3000, 3500, 5000);
 	glPushMatrix();
 	glTranslatef(x, 0, z);
-	DrawPiece("PAWN.POL");
+	//DrawPiece("PAWN.POL");
+	glCallList(PAWN);
 	glPopMatrix();
 
 	Interpolate(t, 0.0, 2.0, x, 4000, 4000, 4000, z, 3000, 3500, 5000);
 	glPushMatrix();
 	glTranslatef(x, 0, z);
-	DrawPiece("PAWN.POL");
+	//DrawPiece("PAWN.POL");
+	glCallList(PAWN);
 	glPopMatrix();
 	for (int x = 5000; x <= 9000; x += 1000)
 	{
@@ -442,7 +453,7 @@ void display(void)
 		cout << x << endl;
 		glPushMatrix();
 		glTranslatef(x, 0, 3000);
-
+		glCallList(PAWN);
 		DrawPiece("PAWN.POL");
 		glPopMatrix();
 	}
@@ -467,7 +478,8 @@ void display(void)
 		if (x != 5000) {
 			glPushMatrix();
 			glTranslatef(x, 0, 8000);
-			DrawPiece("PAWN.POL");
+			glCallList(PAWN);
+			// DrawPiece("PAWN.POL");
 			glPopMatrix();
 		}
 
@@ -475,26 +487,31 @@ void display(void)
 	Interpolate(t, 2.5, 4.0, x, 5000, 5000, 5000, z, 8000, 7000, 6000);
 	glPushMatrix();
 	glTranslatef(x, 0, z);
-	DrawPiece("PAWN.POL");
+	glCallList(PAWN);
+	//DrawPiece("PAWN.POL");
 	glPopMatrix();
 	glPushMatrix();
 	glTranslatef(9000, 0, 9000);
-	DrawPiece("ROOK.POL");
+	glCallList(ROOK);
+	//DrawPiece("ROOK.POL");
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(8000, 0, 9000);
-	DrawPiece("KNIGHT.POL");
+	glCallList(KNIGHT);
+	//DrawPiece("KNIGHT.POL");
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(7000, 0, 9000);
-	DrawPiece("BISHOP.POL");
+	glCallList(BISHOP);
+	//DrawPiece("BISHOP.POL");
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(5000, 0, 9000);
-	DrawPiece("KING.POL");
+	glCallList(KING);
+	//DrawPiece("KING.POL");
 	glPopMatrix();
 
 	
@@ -510,7 +527,8 @@ void display(void)
 	Interpolate(t, 11.0, 12.0, x, 2000, 3000, 5000, z, 5000, 3000, 2000);
 	
 	glTranslatef(x, 0, z);
-	DrawPiece("QUEEN.POL");
+	glCallList(QUEEN);
+	//DrawPiece("QUEEN.POL");
 	glPopMatrix();
 
 
@@ -520,17 +538,20 @@ void display(void)
 
 	glPushMatrix();
 	glTranslatef(4000, 0, 9000);
-	DrawPiece("BISHOP.POL");
+	glCallList(BISHOP);
+	//DrawPiece("BISHOP.POL");
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(3000, 0, 9000);
-	DrawPiece("KNIGHT.POL");
+	glCallList(KNIGHT);
+	//DrawPiece("KNIGHT.POL");
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(2000, 0, 9000);
-	DrawPiece("ROOK.POL");
+	//DrawPiece("ROOK.POL");
+	glCallList(ROOK);
 	glPopMatrix();
 
 	GLfloat light_position[] = { 1,2,-.1f, 0 }; // light comes FROM this vector direction.
